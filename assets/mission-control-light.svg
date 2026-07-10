@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="980" height="410" viewBox="0 0 980 410" role="img" aria-labelledby="title desc">
-<title id="title">Mission control dashboard for YOUR NAME</title>
+<title id="title">Mission control dashboard for IpsitKalra</title>
 <desc id="desc">A live developer telemetry panel showing personalized metrics, current work, active repositories, languages, and refresh time.</desc>
 <defs>
   <linearGradient id="frame" x1="0" y1="0" x2="1" y2="1">
@@ -38,35 +38,35 @@
     <line x1="162" y1="178" x2="162" y2="70" stroke="#0969da" stroke-width="2" opacity="0.9" filter="url(#glow)">
       <animateTransform attributeName="transform" type="rotate" from="0 162 178" to="360 162 178" dur="7s" repeatCount="indefinite"/>
     </line>
-    <circle cx="225" cy="147" r="2" fill="#0969da" opacity="0.75"><animate attributeName="opacity" values="0.25;0.95;0.25" dur="3s" begin="1.0s" repeatCount="indefinite"/></circle>
-<circle cx="134" cy="137" r="3" fill="#0969da" opacity="0.75"><animate attributeName="opacity" values="0.25;0.95;0.25" dur="7s" begin="0.7s" repeatCount="indefinite"/></circle>
-<circle cx="184" cy="151" r="4" fill="#0969da" opacity="0.75"><animate attributeName="opacity" values="0.25;0.95;0.25" dur="7s" begin="2.3s" repeatCount="indefinite"/></circle>
-<circle cx="240" cy="199" r="3" fill="#0969da" opacity="0.75"><animate attributeName="opacity" values="0.25;0.95;0.25" dur="3s" begin="0.3s" repeatCount="indefinite"/></circle>
-<circle cx="92" cy="261" r="4" fill="#0969da" opacity="0.75"><animate attributeName="opacity" values="0.25;0.95;0.25" dur="5s" begin="0.0s" repeatCount="indefinite"/></circle>
-<circle cx="89" cy="162" r="4" fill="#0969da" opacity="0.75"><animate attributeName="opacity" values="0.25;0.95;0.25" dur="7s" begin="0.0s" repeatCount="indefinite"/></circle>
-<circle cx="159" cy="154" r="3" fill="#0969da" opacity="0.75"><animate attributeName="opacity" values="0.25;0.95;0.25" dur="7s" begin="0.3s" repeatCount="indefinite"/></circle>
-<circle cx="182" cy="194" r="2" fill="#0969da" opacity="0.75"><animate attributeName="opacity" values="0.25;0.95;0.25" dur="5s" begin="1.7s" repeatCount="indefinite"/></circle>
-<circle cx="143" cy="212" r="2" fill="#0969da" opacity="0.75"><animate attributeName="opacity" values="0.25;0.95;0.25" dur="6s" begin="1.7s" repeatCount="indefinite"/></circle>
-<circle cx="142" cy="247" r="4" fill="#0969da" opacity="0.75"><animate attributeName="opacity" values="0.25;0.95;0.25" dur="5s" begin="1.3s" repeatCount="indefinite"/></circle>
-<circle cx="230" cy="131" r="4" fill="#0969da" opacity="0.75"><animate attributeName="opacity" values="0.25;0.95;0.25" dur="3s" begin="1.7s" repeatCount="indefinite"/></circle>
-<circle cx="197" cy="231" r="3" fill="#0969da" opacity="0.75"><animate attributeName="opacity" values="0.25;0.95;0.25" dur="5s" begin="2.0s" repeatCount="indefinite"/></circle>
-<circle cx="90" cy="157" r="3" fill="#0969da" opacity="0.75"><animate attributeName="opacity" values="0.25;0.95;0.25" dur="3s" begin="1.3s" repeatCount="indefinite"/></circle>
-<circle cx="211" cy="253" r="3" fill="#0969da" opacity="0.75"><animate attributeName="opacity" values="0.25;0.95;0.25" dur="4s" begin="0.3s" repeatCount="indefinite"/></circle>
-<circle cx="89" cy="198" r="2" fill="#0969da" opacity="0.75"><animate attributeName="opacity" values="0.25;0.95;0.25" dur="7s" begin="0.0s" repeatCount="indefinite"/></circle>
-<circle cx="130" cy="161" r="4" fill="#0969da" opacity="0.75"><animate attributeName="opacity" values="0.25;0.95;0.25" dur="3s" begin="2.7s" repeatCount="indefinite"/></circle>
+    <circle cx="166" cy="75" r="2" fill="#0969da" opacity="0.75"><animate attributeName="opacity" values="0.25;0.95;0.25" dur="4s" begin="1.0s" repeatCount="indefinite"/></circle>
+<circle cx="205" cy="145" r="4" fill="#0969da" opacity="0.75"><animate attributeName="opacity" values="0.25;0.95;0.25" dur="3s" begin="0.3s" repeatCount="indefinite"/></circle>
+<circle cx="237" cy="179" r="3" fill="#0969da" opacity="0.75"><animate attributeName="opacity" values="0.25;0.95;0.25" dur="5s" begin="2.7s" repeatCount="indefinite"/></circle>
+<circle cx="137" cy="175" r="3" fill="#0969da" opacity="0.75"><animate attributeName="opacity" values="0.25;0.95;0.25" dur="5s" begin="1.3s" repeatCount="indefinite"/></circle>
+<circle cx="224" cy="157" r="2" fill="#0969da" opacity="0.75"><animate attributeName="opacity" values="0.25;0.95;0.25" dur="7s" begin="1.3s" repeatCount="indefinite"/></circle>
+<circle cx="114" cy="161" r="3" fill="#0969da" opacity="0.75"><animate attributeName="opacity" values="0.25;0.95;0.25" dur="7s" begin="2.7s" repeatCount="indefinite"/></circle>
+<circle cx="107" cy="136" r="2" fill="#0969da" opacity="0.75"><animate attributeName="opacity" values="0.25;0.95;0.25" dur="5s" begin="0.3s" repeatCount="indefinite"/></circle>
+<circle cx="167" cy="136" r="2" fill="#0969da" opacity="0.75"><animate attributeName="opacity" values="0.25;0.95;0.25" dur="5s" begin="0.3s" repeatCount="indefinite"/></circle>
+<circle cx="133" cy="163" r="3" fill="#0969da" opacity="0.75"><animate attributeName="opacity" values="0.25;0.95;0.25" dur="6s" begin="0.3s" repeatCount="indefinite"/></circle>
+<circle cx="235" cy="187" r="2" fill="#0969da" opacity="0.75"><animate attributeName="opacity" values="0.25;0.95;0.25" dur="3s" begin="2.3s" repeatCount="indefinite"/></circle>
+<circle cx="121" cy="75" r="2" fill="#0969da" opacity="0.75"><animate attributeName="opacity" values="0.25;0.95;0.25" dur="4s" begin="1.0s" repeatCount="indefinite"/></circle>
+<circle cx="189" cy="249" r="2" fill="#0969da" opacity="0.75"><animate attributeName="opacity" values="0.25;0.95;0.25" dur="7s" begin="2.0s" repeatCount="indefinite"/></circle>
+<circle cx="104" cy="165" r="4" fill="#0969da" opacity="0.75"><animate attributeName="opacity" values="0.25;0.95;0.25" dur="7s" begin="1.0s" repeatCount="indefinite"/></circle>
+<circle cx="166" cy="112" r="2" fill="#0969da" opacity="0.75"><animate attributeName="opacity" values="0.25;0.95;0.25" dur="4s" begin="1.3s" repeatCount="indefinite"/></circle>
+<circle cx="117" cy="97" r="2" fill="#0969da" opacity="0.75"><animate attributeName="opacity" values="0.25;0.95;0.25" dur="5s" begin="2.3s" repeatCount="indefinite"/></circle>
+<circle cx="59" cy="179" r="2" fill="#0969da" opacity="0.75"><animate attributeName="opacity" values="0.25;0.95;0.25" dur="7s" begin="2.7s" repeatCount="indefinite"/></circle>
     <circle cx="162" cy="178" r="6" fill="#1a7f37" filter="url(#glow)"/>
   </g>
   <text x="162" y="344" text-anchor="middle" fill="#656d76" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" letter-spacing="2">CHAOS SIGNAL RADAR</text>
 </g>
 
 <!-- Header -->
-<text x="326" y="63" fill="#656d76" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13" letter-spacing="2.2">MISSION CONTROL // YOUR_USERNAME</text>
-<text x="326" y="100" fill="#1f2328" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="28" font-weight="700">YOUR NAME</text>
+<text x="326" y="63" fill="#656d76" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13" letter-spacing="2.2">MISSION CONTROL // IPSITKALRA</text>
+<text x="326" y="100" fill="#1f2328" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="28" font-weight="700">IpsitKalra</text>
 <circle cx="930" cy="57" r="5" fill="#1a7f37" filter="url(#glow)">
   <animate attributeName="opacity" values="0.35;1;0.35" dur="2s" repeatCount="indefinite"/>
 </circle>
 <text x="916" y="62" text-anchor="end" fill="#1a7f37" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" letter-spacing="1.5">ONLINE-ISH</text>
-<text x="326" y="126" fill="#656d76" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="15">Builder of thoughtful systems, useful tools, and ambitious experiments.</text>
+<text x="326" y="126" fill="#656d76" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="15">SWE/AI Eng</text>
 
 <!-- Questionable telemetry -->
 <g font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace">
@@ -91,10 +91,10 @@
   <text x="326" y="270" fill="#1f2328" font-size="15">Building a small thing with an unusually large amount of care.</text>
 
   <text x="326" y="303" fill="#0969da" font-size="12" letter-spacing="1.5">ACTIVE REPOSITORIES</text>
-  <text x="326" y="326" fill="#1f2328" font-size="14">project-alpha  ·  project-orbit  ·  project-signal</text>
+  <text x="326" y="326" fill="#1f2328" font-size="14">IpsitKalra  ·  instagram-friend-group-detector</text>
 
   <text x="326" y="353" fill="#9a6700" font-size="11">CURRENT SANITY: CACHED · COFFEE-to-COMMIT LATENCY: 11m</text>
-  <text x="326" y="376" fill="#656d76" font-size="11">LANGUAGE SIGNALS  TypeScript  ·  Python  ·  YOUR_STACK</text>
-  <text x="932" y="376" text-anchor="end" fill="#656d76" font-size="10">REFRESHED 2026-07-10 18:58 UTC</text>
+  <text x="326" y="376" fill="#656d76" font-size="11">LANGUAGE SIGNALS  Python</text>
+  <text x="932" y="376" text-anchor="end" fill="#656d76" font-size="10">REFRESHED 2026-07-10 19:11 UTC</text>
 </g>
 </svg>
