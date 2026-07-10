@@ -1,0 +1,20 @@
+{
+  "metrics": [
+    {
+      "label": "CLAUDE TOKENS SACRIFICED",
+      "value": "2.7M",
+      "detail": "this month · probably worth it"
+    },
+    {
+      "label": "\"QUICK FIXES\" ATTEMPTED",
+      "value": "14",
+      "detail": "0 remained quick"
+    },
+    {
+      "label": "BUGS PROMOTED TO FEATURES",
+      "value": "06",
+      "detail": "marketing approved"
+    }
+  ],
+  "status_line": "CURRENT SANITY: CACHED · COFFEE-to-COMMIT LATENCY: 11m"
+}

@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="410" viewBox="0 0 980 410" role="img" aria-labelledby="title desc">
+<title id="title">Mission control dashboard for YOUR NAME</title>
+<desc id="desc">A live developer telemetry panel showing personalized metrics, current work, active repositories, languages, and refresh time.</desc>
+<defs>
+  <linearGradient id="frame" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#0969da" stop-opacity="0.75"/>
+    <stop offset="0.55" stop-color="#1a7f37" stop-opacity="0.2"/>
+    <stop offset="1" stop-color="#9a6700" stop-opacity="0.65"/>
+  </linearGradient>
+  <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+    <feGaussianBlur stdDeviation="3" result="blur"/>
+    <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+  </filter>
+  <pattern id="microgrid" width="24" height="24" patternUnits="userSpaceOnUse">
+    <path d="M 24 0 L 0 0 0 24" fill="none" stroke="#d8dee4" stroke-width="0.6" opacity="0.45"/>
+  </pattern>
+</defs>
+
+<rect width="980" height="410" rx="22" fill="#f6f8fa"/>
+<rect x="1" y="1" width="978" height="408" rx="21" fill="none" stroke="url(#frame)" stroke-width="2"/>
+<rect x="18" y="18" width="944" height="374" rx="16" fill="#ffffff"/>
+<rect x="18" y="18" width="944" height="374" rx="16" fill="url(#microgrid)"/>
+
+<!-- Radar -->
+<g>
+  <circle cx="162" cy="188" r="120" fill="none" stroke="#d8dee4" stroke-width="1"/>
+  <circle cx="162" cy="188" r="86" fill="none" stroke="#d8dee4" stroke-width="1"/>
+  <circle cx="162" cy="188" r="51" fill="none" stroke="#d8dee4" stroke-width="1"/>
+  <line x1="42" y1="188" x2="282" y2="188" stroke="#d8dee4" opacity="0.75"/>
+  <line x1="162" y1="68" x2="162" y2="308" stroke="#d8dee4" opacity="0.75"/>
+  <g transform="translate(0 10)">
+    <circle cx="162" cy="178" r="107" fill="none" stroke="#1a7f37" stroke-width="3" stroke-dasharray="9 15" opacity="0.65">
+      <animateTransform attributeName="transform" type="rotate" from="0 162 178" to="360 162 178" dur="18s" repeatCount="indefinite"/>
+    </circle>
+    <path d="M162 178 L162 70 A108 108 0 0 1 257 127 Z" fill="#0969da" opacity="0.11">
+      <animateTransform attributeName="transform" type="rotate" from="0 162 178" to="360 162 178" dur="7s" repeatCount="indefinite"/>
+    </path>
+    <line x1="162" y1="178" x2="162" y2="70" stroke="#0969da" stroke-width="2" opacity="0.9" filter="url(#glow)">
+      <animateTransform attributeName="transform" type="rotate" from="0 162 178" to="360 162 178" dur="7s" repeatCount="indefinite"/>
+    </line>
+    <circle cx="225" cy="147" r="2" fill="#0969da" opacity="0.75"><animate attributeName="opacity" values="0.25;0.95;0.25" dur="3s" begin="1.0s" repeatCount="indefinite"/></circle>
+<circle cx="134" cy="137" r="3" fill="#0969da" opacity="0.75"><animate attributeName="opacity" values="0.25;0.95;0.25" dur="7s" begin="0.7s" repeatCount="indefinite"/></circle>
+<circle cx="184" cy="151" r="4" fill="#0969da" opacity="0.75"><animate attributeName="opacity" values="0.25;0.95;0.25" dur="7s" begin="2.3s" repeatCount="indefinite"/></circle>
+<circle cx="240" cy="199" r="3" fill="#0969da" opacity="0.75"><animate attributeName="opacity" values="0.25;0.95;0.25" dur="3s" begin="0.3s" repeatCount="indefinite"/></circle>
+<circle cx="92" cy="261" r="4" fill="#0969da" opacity="0.75"><animate attributeName="opacity" values="0.25;0.95;0.25" dur="5s" begin="0.0s" repeatCount="indefinite"/></circle>
+<circle cx="89" cy="162" r="4" fill="#0969da" opacity="0.75"><animate attributeName="opacity" values="0.25;0.95;0.25" dur="7s" begin="0.0s" repeatCount="indefinite"/></circle>
+<circle cx="159" cy="154" r="3" fill="#0969da" opacity="0.75"><animate attributeName="opacity" values="0.25;0.95;0.25" dur="7s" begin="0.3s" repeatCount="indefinite"/></circle>
+<circle cx="182" cy="194" r="2" fill="#0969da" opacity="0.75"><animate attributeName="opacity" values="0.25;0.95;0.25" dur="5s" begin="1.7s" repeatCount="indefinite"/></circle>
+<circle cx="143" cy="212" r="2" fill="#0969da" opacity="0.75"><animate attributeName="opacity" values="0.25;0.95;0.25" dur="6s" begin="1.7s" repeatCount="indefinite"/></circle>
+<circle cx="142" cy="247" r="4" fill="#0969da" opacity="0.75"><animate attributeName="opacity" values="0.25;0.95;0.25" dur="5s" begin="1.3s" repeatCount="indefinite"/></circle>
+<circle cx="230" cy="131" r="4" fill="#0969da" opacity="0.75"><animate attributeName="opacity" values="0.25;0.95;0.25" dur="3s" begin="1.7s" repeatCount="indefinite"/></circle>
+<circle cx="197" cy="231" r="3" fill="#0969da" opacity="0.75"><animate attributeName="opacity" values="0.25;0.95;0.25" dur="5s" begin="2.0s" repeatCount="indefinite"/></circle>
+<circle cx="90" cy="157" r="3" fill="#0969da" opacity="0.75"><animate attributeName="opacity" values="0.25;0.95;0.25" dur="3s" begin="1.3s" repeatCount="indefinite"/></circle>
+<circle cx="211" cy="253" r="3" fill="#0969da" opacity="0.75"><animate attributeName="opacity" values="0.25;0.95;0.25" dur="4s" begin="0.3s" repeatCount="indefinite"/></circle>
+<circle cx="89" cy="198" r="2" fill="#0969da" opacity="0.75"><animate attributeName="opacity" values="0.25;0.95;0.25" dur="7s" begin="0.0s" repeatCount="indefinite"/></circle>
+<circle cx="130" cy="161" r="4" fill="#0969da" opacity="0.75"><animate attributeName="opacity" values="0.25;0.95;0.25" dur="3s" begin="2.7s" repeatCount="indefinite"/></circle>
+    <circle cx="162" cy="178" r="6" fill="#1a7f37" filter="url(#glow)"/>
+  </g>
+  <text x="162" y="344" text-anchor="middle" fill="#656d76" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" letter-spacing="2">CHAOS SIGNAL RADAR</text>
+</g>
+
+<!-- Header -->
+<text x="326" y="63" fill="#656d76" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13" letter-spacing="2.2">MISSION CONTROL // YOUR_USERNAME</text>
+<text x="326" y="100" fill="#1f2328" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="28" font-weight="700">YOUR NAME</text>
+<circle cx="930" cy="57" r="5" fill="#1a7f37" filter="url(#glow)">
+  <animate attributeName="opacity" values="0.35;1;0.35" dur="2s" repeatCount="indefinite"/>
+</circle>
+<text x="916" y="62" text-anchor="end" fill="#1a7f37" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" letter-spacing="1.5">ONLINE-ISH</text>
+<text x="326" y="126" fill="#656d76" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="15">Builder of thoughtful systems, useful tools, and ambitious experiments.</text>
+
+<!-- Questionable telemetry -->
+<g font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace">
+  
+  <rect x="326" y="145" width="176" height="68" rx="11" fill="#f6f8fa" stroke="#d8dee4"/>
+  <text x="342" y="166" fill="#656d76" font-size="10" letter-spacing="1.05">CLAUDE TOKENS SACRIFICED</text>
+  <text x="342" y="192" fill="#1f2328" font-size="21" font-weight="700">2.7M</text>
+  <text x="342" y="207" fill="#656d76" font-size="9">this month · probably worth it</text>
+  <rect x="514" y="145" width="176" height="68" rx="11" fill="#f6f8fa" stroke="#d8dee4"/>
+  <text x="530" y="166" fill="#656d76" font-size="10" letter-spacing="1.05">&quot;QUICK FIXES&quot; ATTEMPTED</text>
+  <text x="530" y="192" fill="#1f2328" font-size="21" font-weight="700">14</text>
+  <text x="530" y="207" fill="#656d76" font-size="9">0 remained quick</text>
+  <rect x="702" y="145" width="230" height="68" rx="11" fill="#f6f8fa" stroke="#d8dee4"/>
+  <text x="718" y="166" fill="#656d76" font-size="10" letter-spacing="1.05">BUGS PROMOTED TO FEATURES</text>
+  <text x="718" y="192" fill="#1f2328" font-size="21" font-weight="700">06</text>
+  <text x="718" y="207" fill="#656d76" font-size="9">marketing approved</text>
+</g>
+
+<!-- Signal lines -->
+<g font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace">
+  <text x="326" y="246" fill="#0969da" font-size="12" letter-spacing="1.5">CURRENT TRANSMISSION</text>
+  <text x="326" y="270" fill="#1f2328" font-size="15">Building a small thing with an unusually large amount of care.</text>
+
+  <text x="326" y="303" fill="#0969da" font-size="12" letter-spacing="1.5">ACTIVE REPOSITORIES</text>
+  <text x="326" y="326" fill="#1f2328" font-size="14">project-alpha  ·  project-orbit  ·  project-signal</text>
+
+  <text x="326" y="353" fill="#9a6700" font-size="11">CURRENT SANITY: CACHED · COFFEE-to-COMMIT LATENCY: 11m</text>
+  <text x="326" y="376" fill="#656d76" font-size="11">LANGUAGE SIGNALS  TypeScript  ·  Python  ·  YOUR_STACK</text>
+  <text x="932" y="376" text-anchor="end" fill="#656d76" font-size="10">REFRESHED 2026-07-10 18:58 UTC</text>
+</g>
+</svg>
