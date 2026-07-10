@@ -66,35 +66,34 @@
   <animate attributeName="opacity" values="0.35;1;0.35" dur="2s" repeatCount="indefinite"/>
 </circle>
 <text x="916" y="62" text-anchor="end" fill="#1a7f37" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" letter-spacing="1.5">ONLINE-ISH</text>
-<text x="326" y="126" fill="#656d76" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="15">I build the systems between raw data and real decisions.</text>
+<text x="326" y="126" fill="#656d76" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="15">I like taking hard problems from 0 to 1.</text>
 
 <!-- Questionable telemetry -->
 <g font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace">
   
-  <rect x="326" y="145" width="176" height="68" rx="11" fill="#f6f8fa" stroke="#d8dee4"/>
-  <text x="342" y="166" fill="#656d76" font-size="10" letter-spacing="1.05">CLAUDE TOKENS SACRIFICED</text>
-  <text x="342" y="192" fill="#1f2328" font-size="21" font-weight="700">2.7M</text>
-  <text x="342" y="207" fill="#656d76" font-size="9">this month · probably worth it</text>
-  <rect x="514" y="145" width="176" height="68" rx="11" fill="#f6f8fa" stroke="#d8dee4"/>
-  <text x="530" y="166" fill="#656d76" font-size="10" letter-spacing="1.05">&quot;QUICK FIXES&quot; ATTEMPTED</text>
-  <text x="530" y="192" fill="#1f2328" font-size="21" font-weight="700">14</text>
-  <text x="530" y="207" fill="#656d76" font-size="9">0 remained quick</text>
-  <rect x="702" y="145" width="230" height="68" rx="11" fill="#f6f8fa" stroke="#d8dee4"/>
-  <text x="718" y="166" fill="#656d76" font-size="10" letter-spacing="1.05">BUGS PROMOTED TO FEATURES</text>
-  <text x="718" y="192" fill="#1f2328" font-size="21" font-weight="700">06</text>
-  <text x="718" y="207" fill="#656d76" font-size="9">marketing approved</text>
+  <rect x="326" y="145" width="194" height="68" rx="11" fill="#f6f8fa" stroke="#d8dee4"/>
+  <text x="340" y="166" fill="#656d76" font-size="9.5" letter-spacing="0.6">CLAUDE TOKENS SACRIFICED</text>
+  <text x="340" y="192" fill="#1f2328" font-size="21" font-weight="700">2.7M</text>
+  <text x="340" y="207" fill="#656d76" font-size="8.5">this month · probably worth it</text>
+  <rect x="532" y="145" width="194" height="68" rx="11" fill="#f6f8fa" stroke="#d8dee4"/>
+  <text x="546" y="166" fill="#656d76" font-size="9.5" letter-spacing="0.6">&quot;QUICK FIXES&quot; ATTEMPTED</text>
+  <text x="546" y="192" fill="#1f2328" font-size="21" font-weight="700">14</text>
+  <text x="546" y="207" fill="#656d76" font-size="8.5">0 remained quick</text>
+  <rect x="738" y="145" width="194" height="68" rx="11" fill="#f6f8fa" stroke="#d8dee4"/>
+  <text x="752" y="166" fill="#656d76" font-size="9.5" letter-spacing="0.6">BUGS PROMOTED TO FEATURES</text>
+  <text x="752" y="192" fill="#1f2328" font-size="21" font-weight="700">06</text>
+  <text x="752" y="207" fill="#656d76" font-size="8.5">marketing approved</text>
 </g>
 
 <!-- Signal lines -->
 <g font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace">
-  <text x="326" y="246" fill="#0969da" font-size="12" letter-spacing="1.5">CURRENT TRANSMISSION</text>
-  <text x="326" y="270" fill="#1f2328" font-size="15">Building entity-resolution systems that turn messy location data into decisions.</text>
-
-  <text x="326" y="303" fill="#0969da" font-size="12" letter-spacing="1.5">ACTIVE REPOSITORIES</text>
-  <text x="326" y="326" fill="#1f2328" font-size="14">IpsitKalra  ·  instagram-friend-group-detector</text>
-
-  <text x="326" y="353" fill="#9a6700" font-size="11">CURRENT SANITY: CACHED · COFFEE-to-COMMIT LATENCY: 11m</text>
-  <text x="326" y="376" fill="#656d76" font-size="11">LANGUAGE SIGNALS  Python</text>
-  <text x="932" y="376" text-anchor="end" fill="#656d76" font-size="10">REFRESHED 2026-07-10 19:30 UTC</text>
+  <text x="326" y="242" fill="#0969da" font-size="12" letter-spacing="1.5">CURRENT TRANSMISSION</text>
+  <text x="326" y="263" fill="#1f2328" font-size="14">Building entity-resolution systems that turn messy location data</text>
+  <text x="326" y="282" fill="#1f2328" font-size="14">into decisions.</text>
+  <text x="326" y="313" fill="#0969da" font-size="12" letter-spacing="1.5">ACTIVE REPOSITORIES</text>
+  <text x="326" y="334" fill="#1f2328" font-size="14">IpsitKalra  ·  instagram-friend-group-detector</text>
+  <text x="326" y="360" fill="#9a6700" font-size="11">CURRENT SANITY: CACHED · COFFEE-to-COMMIT LATENCY: 11m</text>
+  <text x="326" y="381" fill="#656d76" font-size="11">LANGUAGE SIGNALS  Python · TypeScript · React · Next.js · SQL</text>
+  <text x="932" y="381" text-anchor="end" fill="#656d76" font-size="10">REFRESHED 2026-07-10 19:42 UTC</text>
 </g>
 </svg>
