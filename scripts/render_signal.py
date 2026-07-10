@@ -103,6 +103,26 @@ def load_telemetry() -> tuple[list[dict[str, str]], str]:
     return metrics, status
 
 
+def load_identity() -> dict[str, str]:
+    """Optional name/bio overrides from TELEMETRY.json.
+
+    Lets the card show a real display name even when the GitHub profile
+    leaves the name field blank. Empty strings mean "fall back to GitHub".
+    """
+    if not TELEMETRY_FILE.exists():
+        return {"name": "", "bio": ""}
+    try:
+        loaded = json.loads(TELEMETRY_FILE.read_text(encoding="utf-8"))
+    except json.JSONDecodeError:
+        return {"name": "", "bio": ""}
+    if not isinstance(loaded, dict):
+        return {"name": "", "bio": ""}
+    return {
+        "name": str(loaded.get("name") or "")[:40],
+        "bio": str(loaded.get("bio") or "")[:96],
+    }
+
+
 def format_compact(value: int) -> str:
     if value < 1_000:
         return str(value)
@@ -166,6 +186,7 @@ def anthropic_tokens_this_month(admin_key: str) -> int | None:
 
 def get_data(username: str, github_token: str, anthropic_admin_key: str) -> dict[str, Any]:
     metrics, status_line = load_telemetry()
+    identity = load_identity()
     live_tokens = anthropic_tokens_this_month(anthropic_admin_key)
     if live_tokens is not None:
         metrics[0] = {
@@ -189,9 +210,9 @@ def get_data(username: str, github_token: str, anthropic_admin_key: str) -> dict
     languages = Counter(repo.get("language") for repo in owned if repo.get("language"))
 
     return {
-        "name": user.get("name") or username,
+        "name": identity["name"] or user.get("name") or username,
         "username": username,
-        "bio": (user.get("bio") or "Building software, systems, and useful experiments.")[:96],
+        "bio": (identity["bio"] or user.get("bio") or "Building software, systems, and useful experiments.")[:96],
         "active": [repo.get("name", "unknown") for repo in active],
         "languages": [name for name, _ in languages.most_common(3)],
         "metrics": metrics,

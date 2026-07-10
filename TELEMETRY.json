@@ -1,4 +1,6 @@
 {
+  "name": "Ipsit Kalra",
+  "bio": "I build the systems between raw data and real decisions.",
   "metrics": [
     {
       "label": "CLAUDE TOKENS SACRIFICED",
