@@ -63,7 +63,7 @@ A personal Claude Pro/Max subscription does not provide this workflow with a uni
 ## Local preview
 
 ```bash
-PROFILE_USERNAME=your-github-username python scripts/render_signal.py
+PROFILE_USERNAME=your-github-username python3 scripts/render_signal.py
 ```
 
 Without credentials, the script uses the editable telemetry file and creates a polished placeholder preview. In GitHub Actions it uses the built-in `GITHUB_TOKEN` for public repository data.
