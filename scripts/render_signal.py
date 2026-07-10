@@ -74,9 +74,9 @@ def clean_metric(metric: Any, fallback: dict[str, str]) -> dict[str, str]:
     if not isinstance(metric, dict):
         return fallback.copy()
     return {
-        "label": str(metric.get("label") or fallback["label"])[:32],
+        "label": str(metric.get("label") or fallback["label"])[:26],
         "value": str(metric.get("value") or fallback["value"])[:14],
-        "detail": str(metric.get("detail") or fallback["detail"])[:38],
+        "detail": str(metric.get("detail") or fallback["detail"])[:32],
     }
 
 
@@ -103,23 +103,28 @@ def load_telemetry() -> tuple[list[dict[str, str]], str]:
     return metrics, status
 
 
-def load_identity() -> dict[str, str]:
-    """Optional name/bio overrides from TELEMETRY.json.
+def load_identity() -> dict[str, Any]:
+    """Optional name/bio/stack overrides from TELEMETRY.json.
 
     Lets the card show a real display name even when the GitHub profile
-    leaves the name field blank. Empty strings mean "fall back to GitHub".
+    leaves the name field blank, and a curated stack instead of the raw
+    language mix inferred from repositories. Empty values fall back.
     """
+    empty: dict[str, Any] = {"name": "", "bio": "", "stack": []}
     if not TELEMETRY_FILE.exists():
-        return {"name": "", "bio": ""}
+        return empty
     try:
         loaded = json.loads(TELEMETRY_FILE.read_text(encoding="utf-8"))
     except json.JSONDecodeError:
-        return {"name": "", "bio": ""}
+        return empty
     if not isinstance(loaded, dict):
-        return {"name": "", "bio": ""}
+        return empty
+    raw_stack = loaded.get("stack")
+    stack = [str(item)[:16] for item in raw_stack if item][:6] if isinstance(raw_stack, list) else []
     return {
         "name": str(loaded.get("name") or "")[:40],
         "bio": str(loaded.get("bio") or "")[:96],
+        "stack": stack,
     }
 
 
@@ -214,7 +219,7 @@ def get_data(username: str, github_token: str, anthropic_admin_key: str) -> dict
         "username": username,
         "bio": (identity["bio"] or user.get("bio") or "Building software, systems, and useful experiments.")[:96],
         "active": [repo.get("name", "unknown") for repo in active],
-        "languages": [name for name, _ in languages.most_common(3)],
+        "languages": identity["stack"] or [name for name, _ in languages.most_common(3)],
         "metrics": metrics,
         "status_line": status_line,
         "transmission": read_transmission(),
@@ -246,12 +251,35 @@ def fit(items: list[str], fallback: str) -> str:
     return text[:62]
 
 
+def wrap_lines(text: str, max_chars: int, max_lines: int) -> list[str]:
+    """Greedily wrap text into up to max_lines lines, ellipsizing any overflow.
+
+    SVG <text> does not wrap on its own, so long strings must be split into
+    separate lines by hand.
+    """
+    lines: list[str] = []
+    current = ""
+    for word in text.split():
+        candidate = f"{current} {word}".strip()
+        if current and len(candidate) > max_chars:
+            lines.append(current)
+            current = word
+        else:
+            current = candidate
+    if current:
+        lines.append(current)
+    if len(lines) > max_lines:
+        lines = lines[:max_lines]
+        lines[-1] = lines[-1][: max_chars - 1].rstrip() + "…"
+    return lines or [""]
+
+
 def render_metric(metric: dict[str, str], x: int, width: int, bg: str, grid: str, muted: str, text: str) -> str:
     return f'''
   <rect x="{x}" y="145" width="{width}" height="68" rx="11" fill="{bg}" stroke="{grid}"/>
-  <text x="{x + 16}" y="166" fill="{muted}" font-size="10" letter-spacing="1.05">{safe(metric['label'])}</text>
-  <text x="{x + 16}" y="192" fill="{text}" font-size="21" font-weight="700">{safe(metric['value'])}</text>
-  <text x="{x + 16}" y="207" fill="{muted}" font-size="9">{safe(metric['detail'])}</text>'''
+  <text x="{x + 14}" y="166" fill="{muted}" font-size="9.5" letter-spacing="0.6">{safe(metric['label'])}</text>
+  <text x="{x + 14}" y="192" fill="{text}" font-size="21" font-weight="700">{safe(metric['value'])}</text>
+  <text x="{x + 14}" y="207" fill="{muted}" font-size="8.5">{safe(metric['detail'])}</text>'''
 
 
 def render_svg(data: dict[str, Any], mode: str) -> str:
@@ -273,13 +301,32 @@ def render_svg(data: dict[str, Any], mode: str) -> str:
     )
 
     active = fit(data["active"], "No public active repositories detected")
-    languages = fit(data["languages"], "Language signals pending")
+    languages = " · ".join(data["languages"])[:54] if data["languages"] else "Language signals pending"
     metrics = data["metrics"]
+
+    transmission_lines = wrap_lines(data["transmission"], 68, 2)
+    signal = []
+    y = 242
+    signal.append(f'<text x="326" y="{y}" fill="{accent2}" font-size="12" letter-spacing="1.5">CURRENT TRANSMISSION</text>')
+    y += 21
+    for line in transmission_lines:
+        signal.append(f'<text x="326" y="{y}" fill="{text}" font-size="14">{safe(line)}</text>')
+        y += 19
+    y += 12
+    signal.append(f'<text x="326" y="{y}" fill="{accent2}" font-size="12" letter-spacing="1.5">ACTIVE REPOSITORIES</text>')
+    y += 21
+    signal.append(f'<text x="326" y="{y}" fill="{text}" font-size="14">{safe(active)}</text>')
+    y += 26
+    signal.append(f'<text x="326" y="{y}" fill="{warning}" font-size="11">{safe(data["status_line"])}</text>')
+    y += 21
+    signal.append(f'<text x="326" y="{y}" fill="{muted}" font-size="11">LANGUAGE SIGNALS  {safe(languages)}</text>')
+    signal.append(f'<text x="932" y="{y}" text-anchor="end" fill="{muted}" font-size="10">REFRESHED {safe(data["updated"])}</text>')
+    signal_lines = "\n  ".join(signal)
     metric_cards = "".join(
         (
-            render_metric(metrics[0], 326, 176, bg, grid, muted, text),
-            render_metric(metrics[1], 514, 176, bg, grid, muted, text),
-            render_metric(metrics[2], 702, 230, bg, grid, muted, text),
+            render_metric(metrics[0], 326, 194, bg, grid, muted, text),
+            render_metric(metrics[1], 532, 194, bg, grid, muted, text),
+            render_metric(metrics[2], 738, 194, bg, grid, muted, text),
         )
     )
 
@@ -345,15 +392,7 @@ def render_svg(data: dict[str, Any], mode: str) -> str:
 
 <!-- Signal lines -->
 <g font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace">
-  <text x="326" y="246" fill="{accent2}" font-size="12" letter-spacing="1.5">CURRENT TRANSMISSION</text>
-  <text x="326" y="270" fill="{text}" font-size="15">{safe(data['transmission'])}</text>
-
-  <text x="326" y="303" fill="{accent2}" font-size="12" letter-spacing="1.5">ACTIVE REPOSITORIES</text>
-  <text x="326" y="326" fill="{text}" font-size="14">{safe(active)}</text>
-
-  <text x="326" y="353" fill="{warning}" font-size="11">{safe(data['status_line'])}</text>
-  <text x="326" y="376" fill="{muted}" font-size="11">LANGUAGE SIGNALS  {safe(languages)}</text>
-  <text x="932" y="376" text-anchor="end" fill="{muted}" font-size="10">REFRESHED {safe(data['updated'])}</text>
+  {signal_lines}
 </g>
 </svg>'''
 

@@ -1,6 +1,7 @@
 {
   "name": "Ipsit Kalra",
-  "bio": "I build the systems between raw data and real decisions.",
+  "bio": "I like taking hard problems from 0 to 1.",
+  "stack": ["Python", "TypeScript", "React", "Next.js", "SQL"],
   "metrics": [
     {
       "label": "CLAUDE TOKENS SACRIFICED",
